@@ -1,0 +1,25 @@
+.cardContainer {
+  width: 170px;
+  height: 200px;
+  background-color: #f5f5f5;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.cardContainer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cardContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

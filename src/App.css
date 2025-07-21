@@ -1,0 +1,18 @@
+/* App container styling */
+.appContainer {
+  padding: 20px;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Grid layout for cards */
+.cardGrid {
+  display: grid;
+  justify-content: space-between;
+  padding:20px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px 40px;
+  justify-items: center;
+  
+}
