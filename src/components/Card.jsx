@@ -1,10 +1,10 @@
 import React from 'react'
 import './card.css'
 
-const Card = ({image,type}) => {
+const Card = ({image,onClick}) => {
   return (
-    <div className='cardContainer'>
-        <img src={image}/>
+    <div className='cardContainer' onClick={onClick}>
+        <img src={image} alt="pokemon"/>
 
       
     </div>

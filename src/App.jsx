@@ -29,8 +29,12 @@ function App() {
    }
    createPokeObject(data.results)
   }
-  const handleClick = () => {
-    
+  const handleCardClick = (name) => {
+    setAllPokes(
+      prevPokes => prevPokes.map(
+        poke => poke.name===name ? {...poke,isClicked:true}:poke
+      )
+    )
 
   }
   useEffect(()=>{
@@ -40,7 +44,7 @@ function App() {
   useEffect(() => {
 }, [allPokes])
 
-
+console.log(allPokes)
   return (
     <>
     <div className="appContainer">
@@ -50,6 +54,7 @@ function App() {
         <Card
           key={pokemon.name}
           image={pokemon.sprites.other.dream_world.front_default || pokemon.sprites.front_default}
+          onClick={()=>handleCardClick(pokemon.name)}
         />
       ))}
     </div>
